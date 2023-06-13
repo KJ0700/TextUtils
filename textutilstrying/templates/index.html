@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>TextUtils</title>
+</head>
+<body>
+    <div class="'container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">TextUtils.com</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/sarthaksamantaray/">LinkedIn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/sarthak-samantaray?tab=repositories">Github</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class = "container">
+        <h1> Welcome to TextUtils.com </h1>
+        <div class="alert alert-info" role="alert">
+            This is text utils website, write anything and do anything!!!!!
+          </div>
+        <form action="/analyze" method="post">
+            {% csrf_token %}
+            <textarea name="text" style="margin: 0px; width: 721px; height: 250px;"></textarea> <br>
+            <input type="checkbox" name="removepunc"> Remove Punctuations <br>
+            <input type="checkbox" name = "fullcaps"> UPPERCASE <br>
+            <button type="submit" class="btn btn-outline-success">Analyze Your Text</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
